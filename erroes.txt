@@ -1,0 +1,280 @@
+⨯ ./src/app/page.tsx:222:24
+Error: Unexpected character '\0'
+  220 |                         className={`mt-2 flex items-center justify-center gap-1.5 rounded-full bg-pink-400 py-1.5 text-center te...  221 |                           !p.disponible
+> 222 |                      
+      |                      ^
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+
+./src/app/page.tsx:222:25
+Error: Unexpected character '\0'
+  220 |                         className={`mt-2 flex items-center justify-center gap-1.5 rounded-full bg-pink-400 py-1.5 text-center te...  221 |                           !p.disponible
+> 222 |                      
+      |                      ^
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+
+./src/app/page.tsx:222:26
+Error: Unexpected character '\0'
+  220 |                         className={`mt-2 flex items-center justify-center gap-1.5 rounded-full bg-pink-400 py-1.5 text-center te...  221 |                           !p.disponible
+> 222 |                      
+      |                      ^
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+
+./src/app/page.tsx:222:27
+Error: Unexpected character '\0'
+  220 |                         className={`mt-2 flex items-center justify-center gap-1.5 rounded-full bg-pink-400 py-1.5 text-center te...  221 |                           !p.disponible
+> 222 |                      
+      |                      ^
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+
+./src/app/page.tsx:222:32
+Error: Unexpected character '\0'
+  220 |                         className={`mt-2 flex items-center justify-center gap-1.5 rounded-full bg-pink-400 py-1.5 text-center te...  221 |                           !p.disponible
+> 222 |                      
+      |                      ^
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+
+./src/app/page.tsx:222:33
+Error: Unexpected character '\0'
+  220 |                         className={`mt-2 flex items-center justify-center gap-1.5 rounded-full bg-pink-400 py-1.5 text-center te...  221 |                           !p.disponible
+> 222 |                      
+      |                      ^
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+
+./src/app/page.tsx:222:34
+Error: Unexpected character '\0'
+  220 |                         className={`mt-2 flex items-center justify-center gap-1.5 rounded-full bg-pink-400 py-1.5 text-center te...  221 |                           !p.disponible
+> 222 |                      
+      |                      ^
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+
+./src/app/page.tsx:222:35
+Error: Unexpected character '\0'
+  220 |                         className={`mt-2 flex items-center justify-center gap-1.5 rounded-full bg-pink-400 py-1.5 text-center te...  221 |                           !p.disponible
+> 222 |                      
+      |                      ^
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+
+./src/app/page.tsx:222:37
+Error: Unexpected character '\0'
+  220 |                         className={`mt-2 flex items-center justify-center gap-1.5 rounded-full bg-pink-400 py-1.5 text-center te...  221 |                           !p.disponible
+> 222 |                      
+      |                      ^
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+
+./src/app/page.tsx:222:38
+Error: Unexpected character '\0'
+  220 |                         className={`mt-2 flex items-center justify-center gap-1.5 rounded-full bg-pink-400 py-1.5 text-center te...  221 |                           !p.disponible
+> 222 |                      
+      |                      ^
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+
+./src/app/page.tsx:222:40
+Error: Unexpected character '\0'
+  220 |                         className={`mt-2 flex items-center justify-center gap-1.5 rounded-full bg-pink-400 py-1.5 text-center te...  221 |                           !p.disponible
+> 222 |                      
+      |                      ^
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+
+./src/app/page.tsx:222:41
+Error: Unexpected character '\0'
+  220 |                         className={`mt-2 flex items-center justify-center gap-1.5 rounded-full bg-pink-400 py-1.5 text-center te...  221 |                           !p.disponible
+> 222 |                      
+      |                      ^
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+ GET / 500 in 7.6s (next.js: 5.1s, application-code: 2.5s)
+[browser] ./src/app/page.tsx:222:41
+Error: Unexpected character '\0'
+  220 |                         className={`mt-2 flex items-center justify-center gap-1.5 rounded-full bg-pink-400 py-1.5 text-center te...  221 |                           !p.disponible
+> 222 |                      
+      |                      ^
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component] 
+[browser] ./src/app/page.tsx:222:41
+Error: Unexpected character '\0'
+  220 |                         className={`mt-2 flex items-center justify-center gap-1.5 rounded-full bg-pink-400 py-1.5 text-center te...  221 |                           !p.disponible
+> 222 |                      
+      |                      ^
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component] 
+[browser] Uncaught Error: ./src/app/page.tsx:222:41
+Error: Unexpected character '\0'
+  220 |                         className={`mt-2 flex items-center justify-center gap-1.5 rounded-full bg-pink-400 py-1.5 text-center te...  221 |                           !p.disponible
+> 222 |                      
+      |                      ^
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+    at <unknown> (Error: ./src/app/page.tsx:222:41)
+    at <unknown> (Error: (./src/app/page.tsx:222:41)
