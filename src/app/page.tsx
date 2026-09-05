@@ -34,6 +34,8 @@ const CATEGORIAS_ORDER = [
 
 const WHATSAPP_NUMERO = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "";
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:4000";
+
 const formatearPrecio = (precio: number) =>
   new Intl.NumberFormat("es-CO", {
     style: "currency",
@@ -91,7 +93,7 @@ export default function Home() {
 
   const cargarProductos = useCallback(() => {
     setStatus("loading");
-    fetch("http://localhost:4000/api/productos")
+    fetch(`${API_URL}/api/productos`)
       .then((res) => {
         if (!res.ok) throw new Error("Error de red");
         return res.json();
