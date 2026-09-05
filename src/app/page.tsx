@@ -290,7 +290,7 @@ export default function Home() {
                         href={
                           p.disponible
                             ? `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(
-                                `Hola, quiero pedir ${p.nombre}`
+                                `Hola, quiero pedir: ${p.nombre} (${formatearPrecio(p.precio)})`
                               )}`
                             : undefined
                         }
