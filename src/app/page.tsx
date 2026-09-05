@@ -262,10 +262,20 @@ export default function Home() {
                       !p.disponible ? "opacity-70" : ""
                     }`}
                   >
-                    <div className="relative flex aspect-square items-center justify-center bg-pink-100/60">
-                      <span className="text-xs text-pink-300">
-                        {p.nombre.split(" ")[0]}
-                      </span>
+                    <div className="relative aspect-square bg-pink-100/60">
+                      {p.foto ? (
+                        <Image
+                          src={p.foto}
+                          alt={p.nombre}
+                          fill
+                          sizes="(max-width: 640px) 50vw, 33vw"
+                          className="object-cover"
+                        />
+                      ) : (
+                        <span className="flex h-full w-full items-center justify-center text-xs text-pink-300">
+                          {p.nombre.split(" ")[0]}
+                        </span>
+                      )}
                       {!p.disponible && (
                         <span className="absolute inset-0 flex items-center justify-center bg-black/40">
                           <span className="rounded-full bg-red-500 px-3 py-1 text-xs font-semibold uppercase text-white">
