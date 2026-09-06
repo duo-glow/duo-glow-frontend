@@ -52,7 +52,7 @@ function CatalogoContent() {
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-8">
-      <h1 className="mb-6 text-center font-cursive text-5xl text-rosa-fuerte">
+      <h1 className="mb-6 text-center font-cursive text-5xl text-rosa-intenso">
         Catálogo
       </h1>
 
@@ -89,7 +89,7 @@ function CatalogoContent() {
 
       {status === "error" && (
         <div className="py-16 text-center">
-          <p className="text-lg font-medium text-rosa-medio">
+          <p className="text-lg font-medium text-rosa-intenso">
             No pudimos cargar los productos, intenta de nuevo
           </p>
           <button
@@ -107,7 +107,7 @@ function CatalogoContent() {
             <button
               onClick={desplazarIzquierda}
               aria-label="Desplazar categorías a la izquierda"
-              className="z-10 hidden h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-dorado-medio/60 bg-white text-rosa-medio shadow-sm transition-colors hover:bg-rosa-claro md:flex"
+              className="z-10 hidden h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-dorado-medio/60 bg-white text-rosa-intenso shadow-sm transition-colors hover:bg-rosa-claro md:flex"
             >
               ◀
             </button>
@@ -129,7 +129,7 @@ function CatalogoContent() {
                     className={`whitespace-nowrap rounded-full border-2 px-4 py-1.5 text-sm transition-colors ${
                       activa === c.nombre
                         ? "border-rosa-fuerte bg-rosa-fuerte text-white shadow"
-                        : "border-dorado-medio/60 bg-white text-rosa-fuerte hover:bg-rosa-claro"
+                        : "border-dorado-medio/60 bg-white text-rosa-intenso hover:bg-rosa-claro"
                     }`}
                   >
                     {c.nombre}
@@ -144,7 +144,7 @@ function CatalogoContent() {
             <button
               onClick={desplazarDerecha}
               aria-label="Desplazar categorías a la derecha"
-              className="z-10 hidden h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-dorado-medio/60 bg-white text-rosa-medio shadow-sm transition-colors hover:bg-rosa-claro md:flex"
+              className="z-10 hidden h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-dorado-medio/60 bg-white text-rosa-intenso shadow-sm transition-colors hover:bg-rosa-claro md:flex"
             >
               ▶
             </button>
@@ -158,28 +158,28 @@ function CatalogoContent() {
               >
                 <Link
                   href="/"
-                  className="text-rosa-medio transition-colors hover:text-rosa-fuerte"
+                  className="text-rosa-intenso transition-colors hover:text-rosa-fuerte"
                 >
                   Inicio
                 </Link>
-                <span className="mx-1.5 text-rosa-medio" aria-hidden="true">
+                <span className="mx-1.5 text-rosa-intenso" aria-hidden="true">
                   ›
                 </span>
                 <Link
                   href="/catalogo"
-                  className="text-rosa-medio transition-colors hover:text-rosa-fuerte"
+                  className="text-rosa-intenso transition-colors hover:text-rosa-fuerte"
                 >
                   Catálogo
                 </Link>
-                <span className="mx-1.5 text-rosa-medio" aria-hidden="true">
+                <span className="mx-1.5 text-rosa-intenso" aria-hidden="true">
                   ›
                 </span>
-                <span className="font-semibold text-rosa-fuerte">
+                <span className="font-semibold text-rosa-intenso">
                   {activaData.nombre}
                 </span>
               </nav>
 
-              <h2 className="mb-4 text-center font-cursive text-4xl text-rosa-fuerte">
+              <h2 className="mb-4 text-center font-cursive text-4xl text-rosa-intenso">
                 {activaData.nombre}
               </h2>
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">

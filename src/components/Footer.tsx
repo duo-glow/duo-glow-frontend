@@ -11,13 +11,13 @@ export default function Footer() {
             Navegación
           </h3>
           <nav className="mt-3 flex flex-col gap-2 text-sm">
-            <Link href="/" className="text-rosa-medio transition-colors hover:text-rosa-fuerte">
+            <Link href="/" className="text-rosa-intenso transition-colors hover:text-rosa-fuerte">
               Inicio
             </Link>
-            <Link href="/catalogo" className="text-rosa-medio transition-colors hover:text-rosa-fuerte">
+            <Link href="/catalogo" className="text-rosa-intenso transition-colors hover:text-rosa-fuerte">
               Catálogo
             </Link>
-            <Link href="/contacto" className="text-rosa-medio transition-colors hover:text-rosa-fuerte">
+            <Link href="/contacto" className="text-rosa-intenso transition-colors hover:text-rosa-fuerte">
               Contacto
             </Link>
           </nav>
@@ -32,31 +32,31 @@ export default function Footer() {
               href={`https://wa.me/${WHATSAPP_NUMERO}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-rosa-medio transition-colors hover:text-rosa-fuerte"
+              className="flex items-center gap-2 text-rosa-intenso transition-colors hover:text-rosa-fuerte"
             >
-              <FaWhatsapp className="h-4 w-4 text-dorado-medio" />
+              <FaWhatsapp className="h-4 w-4 text-dorado-oscuro" />
               <span>{formatearWhatsApp(WHATSAPP_NUMERO)}</span>
             </a>
-            <p className="flex items-center gap-2 text-rosa-medio">
-              <FaMapMarkerAlt className="h-4 w-4 shrink-0 text-dorado-medio" />
+            <p className="flex items-center gap-2 text-rosa-intenso">
+              <FaMapMarkerAlt className="h-4 w-4 shrink-0 text-dorado-oscuro" />
               <span>Ibagué, Colombia</span>
             </p>
           </div>
         </div>
 
         <div>
-          <p className="font-cursive text-3xl text-rosa-fuerte">Duo Glow</p>
+          <p className="font-cursive text-3xl text-rosa-intenso">Duo Glow</p>
           <p className="mt-2 text-sm italic tracking-wide text-dorado-oscuro">
             Belleza que inspira
           </p>
-          <p className="mt-2 text-sm text-rosa-medio">
+          <p className="mt-2 text-sm text-rosa-intenso">
             Maquillaje y cuidado personal pensados para resaltar tu belleza
             natural.
           </p>
         </div>
       </div>
 
-      <p className="mt-8 border-t border-dorado-palido pt-4 text-center text-xs text-rosa-medio">
+      <p className="mt-8 border-t border-dorado-palido pt-4 text-center text-xs text-rosa-intenso">
         © {new Date().getFullYear()} Duo Glow · Belleza que inspira. Todos los
         derechos reservados.
       </p>

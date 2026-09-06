@@ -4,13 +4,13 @@ import { WHATSAPP_NUMERO, formatearWhatsApp } from "@/lib/productos";
 export default function Contacto() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-12">
-      <h1 className="mb-8 text-center font-cursive text-5xl text-rosa-fuerte">
+      <h1 className="mb-8 text-center font-cursive text-5xl text-rosa-intenso">
         Contacto
       </h1>
 
       <div className="rounded-xl border-2 border-dorado-palido bg-white p-8 shadow-sm">
-        <h2 className="font-cursive text-3xl text-rosa-fuerte">Sobre Duo Glow</h2>
-        <p className="mt-3 leading-7 text-rosa-medio">
+        <h2 className="font-cursive text-3xl text-rosa-intenso">Sobre Duo Glow</h2>
+        <p className="mt-3 leading-7 text-rosa-intenso">
           En Duo Glow creemos que la belleza inspira. Ofrecemos una selección
           curada de cosméticos y productos de belleza para que te sientas
           segura y radiante cada día. Aquí va un texto de ejemplo que puedes
@@ -30,15 +30,15 @@ export default function Contacto() {
             <FaWhatsapp className="h-4 w-4" />
             Pedir por WhatsApp
           </a>
-          <p className="mt-3 text-center text-xs text-rosa-medio">
+          <p className="mt-3 text-center text-xs text-rosa-intenso">
             {formatearWhatsApp(WHATSAPP_NUMERO)}
           </p>
         </div>
 
         <div className="rounded-xl border-2 border-dorado-palido bg-white p-6 shadow-sm">
           <h2 className="text-lg font-semibold text-rosa-intenso">Ubicación</h2>
-          <p className="mt-3 flex items-center gap-2 text-sm text-rosa-medio">
-            <FaMapMarkerAlt className="h-4 w-4 text-dorado-medio" />
+          <p className="mt-3 flex items-center gap-2 text-sm text-rosa-intenso">
+            <FaMapMarkerAlt className="h-4 w-4 text-dorado-oscuro" />
             Ibagué, Colombia
           </p>
         </div>

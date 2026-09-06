@@ -96,7 +96,7 @@ export default function Inicio() {
       </section>
 
       <section className="mx-auto max-w-5xl px-4 py-12">
-        <h2 className="mb-8 text-center font-cursive text-4xl text-rosa-fuerte">
+        <h2 className="mb-8 text-center font-cursive text-4xl text-rosa-intenso">
           Nuestras categorías
         </h2>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-5">
@@ -108,7 +108,7 @@ export default function Inicio() {
                 href={`/catalogo?categoria=${encodeURIComponent(categoria)}`}
                 className="group flex flex-col items-center gap-3 rounded-2xl bg-rosa-claro p-4 shadow-sm transition-transform hover:-translate-y-1 hover:shadow-md"
               >
-                <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white text-rosa-fuerte shadow-sm transition-colors group-hover:bg-rosa-fuerte group-hover:text-white">
+                <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white text-rosa-intenso shadow-sm transition-colors group-hover:bg-rosa-fuerte group-hover:text-white">
                   {Icono && <Icono size={26} />}
                 </span>
                 <span className="text-center text-sm font-semibold leading-tight text-rosa-intenso">
@@ -123,7 +123,7 @@ export default function Inicio() {
       {/* Aquí irá el carrusel/video de belleza */}
 
       <section className="mx-auto max-w-3xl px-4 py-12">
-        <h2 className="mb-6 text-center font-cursive text-4xl text-rosa-fuerte">
+        <h2 className="mb-6 text-center font-cursive text-4xl text-rosa-intenso">
           Productos destacados
         </h2>
 
@@ -137,7 +137,7 @@ export default function Inicio() {
 
         {status === "error" && (
           <div className="py-16 text-center">
-            <p className="text-lg font-medium text-rosa-medio">
+            <p className="text-lg font-medium text-rosa-intenso">
               No pudimos cargar los productos, intenta de nuevo
             </p>
             <button
@@ -159,12 +159,12 @@ export default function Inicio() {
       </section>
 
       <section className="px-4 pb-16 text-center">
-        <p className="mx-auto max-w-xl text-rosa-medio">
+        <p className="mx-auto max-w-xl text-rosa-intenso">
           Descubre todos nuestros productos en el catálogo completo.
         </p>
         <Link
           href="/catalogo"
-          className="mt-6 inline-block rounded-full border-2 border-rosa-fuerte px-8 py-3 text-sm font-medium text-rosa-fuerte transition-colors hover:bg-rosa-claro"
+          className="mt-6 inline-block rounded-full border-2 border-rosa-intenso px-8 py-3 text-sm font-medium text-rosa-intenso transition-colors hover:bg-rosa-claro"
         >
           Ver catálogo completo
         </Link>

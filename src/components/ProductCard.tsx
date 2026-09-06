@@ -20,7 +20,7 @@ export default function ProductCard({ producto }: { producto: Producto }) {
             className="object-cover"
           />
         ) : (
-          <span className="flex h-full w-full items-center justify-center text-xs text-rosa-medio">
+          <span className="flex h-full w-full items-center justify-center text-xs text-rosa-intenso">
             {p.nombre.split(" ")[0]}
           </span>
         )}
@@ -35,7 +35,7 @@ export default function ProductCard({ producto }: { producto: Producto }) {
       <div className="flex flex-1 flex-col p-3">
         <h3 className="text-sm font-semibold text-rosa-intenso">{p.nombre}</h3>
         {p.tonos.length > 0 && (
-          <p className="mt-0.5 text-xs text-rosa-medio">{p.tonos.join(", ")}</p>
+          <p className="mt-0.5 text-xs text-rosa-intenso">{p.tonos.join(", ")}</p>
         )}
         <p className="mt-1 text-sm font-bold text-dorado-oscuro">
           {formatearPrecio(p.precio)}

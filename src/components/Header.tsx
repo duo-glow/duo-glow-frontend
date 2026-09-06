@@ -37,8 +37,8 @@ export default function Header() {
               href={l.href}
               className={`text-sm font-medium transition-colors ${
                 pathname === l.href
-                  ? "text-rosa-fuerte"
-                  : "text-rosa-medio hover:text-rosa-fuerte"
+                  ? "text-rosa-intenso font-semibold"
+                  : "text-rosa-intenso hover:text-rosa-fuerte"
               }`}
             >
               {l.label}
@@ -49,7 +49,7 @@ export default function Header() {
         <button
           onClick={() => setAbierto((v) => !v)}
           aria-label="Abrir menú"
-          className="flex h-10 w-10 items-center justify-center rounded-full text-rosa-fuerte hover:bg-rosa-claro md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-full text-rosa-intenso hover:bg-rosa-claro md:hidden"
         >
           {abierto ? <FaTimes className="h-5 w-5" /> : <FaBars className="h-5 w-5" />}
         </button>
@@ -64,8 +64,8 @@ export default function Header() {
               onClick={() => setAbierto(false)}
               className={`block rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
                 pathname === l.href
-                  ? "text-rosa-fuerte"
-                  : "text-rosa-medio hover:bg-rosa-claro hover:text-rosa-fuerte"
+                  ? "text-rosa-intenso font-semibold"
+                  : "text-rosa-intenso hover:bg-rosa-claro hover:text-rosa-fuerte"
               }`}
             >
               {l.label}
