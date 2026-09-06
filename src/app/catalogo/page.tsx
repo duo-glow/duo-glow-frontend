@@ -107,7 +107,7 @@ function CatalogoContent() {
             <button
               onClick={desplazarIzquierda}
               aria-label="Desplazar categorías a la izquierda"
-              className="z-10 hidden h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-dorado-medio/60 bg-white text-rosa-intenso shadow-sm transition-colors hover:bg-rosa-claro md:flex"
+              className="z-10 hidden h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-dorado-medio/60 bg-crema text-rosa-intenso shadow-sm transition-colors hover:bg-rosa-claro md:flex"
             >
               ◀
             </button>
@@ -129,7 +129,7 @@ function CatalogoContent() {
                     className={`whitespace-nowrap rounded-full border-2 px-4 py-1.5 text-sm transition-colors ${
                       activa === c.nombre
                         ? "border-rosa-fuerte bg-rosa-fuerte text-white shadow"
-                        : "border-dorado-medio/60 bg-white text-rosa-intenso hover:bg-rosa-claro"
+                        : "border-dorado-medio/60 bg-crema text-rosa-intenso hover:bg-rosa-claro"
                     }`}
                   >
                     {c.nombre}
@@ -144,7 +144,7 @@ function CatalogoContent() {
             <button
               onClick={desplazarDerecha}
               aria-label="Desplazar categorías a la derecha"
-              className="z-10 hidden h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-dorado-medio/60 bg-white text-rosa-intenso shadow-sm transition-colors hover:bg-rosa-claro md:flex"
+              className="z-10 hidden h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-dorado-medio/60 bg-crema text-rosa-intenso shadow-sm transition-colors hover:bg-rosa-claro md:flex"
             >
               ▶
             </button>

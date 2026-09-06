@@ -17,7 +17,7 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-40 border-b-2 border-dorado-palido bg-white/80 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b-2 border-dorado-palido bg-crema/80 backdrop-blur">
       <div className="mx-auto flex max-w-3xl items-center justify-between px-4 py-3">
         <Link href="/" className="flex items-center" onClick={() => setAbierto(false)}>
           <Image
@@ -56,7 +56,7 @@ export default function Header() {
       </div>
 
       {abierto && (
-        <nav className="border-t border-dorado-palido bg-white/95 px-4 py-2 md:hidden">
+        <nav className="border-t border-dorado-palido bg-crema/95 px-4 py-2 md:hidden">
 {LINKS.map((l) => (
             <Link
               key={l.href}

@@ -8,7 +8,7 @@ export default function Contacto() {
         Contacto
       </h1>
 
-      <div className="rounded-xl border-2 border-dorado-palido bg-white p-8 shadow-sm">
+      <div className="rounded-xl border-2 border-dorado-palido bg-crema p-8 shadow-sm">
         <h2 className="font-cursive text-3xl text-rosa-intenso">Sobre Duo Glow</h2>
         <p className="mt-3 leading-7 text-rosa-intenso">
           En Duo Glow creemos que la belleza inspira. Ofrecemos una selección
@@ -19,7 +19,7 @@ export default function Contacto() {
       </div>
 
       <div className="mt-8 grid gap-4 sm:grid-cols-2">
-        <div className="rounded-xl border-2 border-dorado-palido bg-white p-6 shadow-sm">
+        <div className="rounded-xl border-2 border-dorado-palido bg-crema p-6 shadow-sm">
           <h2 className="text-lg font-semibold text-rosa-intenso">Escríbenos</h2>
           <a
             href={`https://wa.me/${WHATSAPP_NUMERO}`}
@@ -35,7 +35,7 @@ export default function Contacto() {
           </p>
         </div>
 
-        <div className="rounded-xl border-2 border-dorado-palido bg-white p-6 shadow-sm">
+        <div className="rounded-xl border-2 border-dorado-palido bg-crema p-6 shadow-sm">
           <h2 className="text-lg font-semibold text-rosa-intenso">Ubicación</h2>
           <p className="mt-3 flex items-center gap-2 text-sm text-rosa-intenso">
             <FaMapMarkerAlt className="h-4 w-4 text-dorado-oscuro" />

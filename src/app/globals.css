@@ -11,6 +11,7 @@
   --font-sans: var(--font-playfair), serif;
   --font-cursive: var(--font-great-vibes), cursive;
   --color-rosa-palido: #fff7f9;
+  --color-crema: #fdf6f0;
   --color-rosa-claro: #f8cfe0;
   --color-rosa-medio: #ef5da8;
   --color-rosa-fuerte: #e2278e;
@@ -21,7 +22,7 @@
 }
 
 body {
-  background: #fff7f9;
+  background: var(--color-crema);
   color: #3f1d2e;
   font-family: var(--font-playfair), serif;
 }
