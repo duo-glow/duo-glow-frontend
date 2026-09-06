@@ -106,7 +106,7 @@ export default function Inicio() {
               <Link
                 key={categoria}
                 href={`/catalogo?categoria=${encodeURIComponent(categoria)}`}
-                className="group flex flex-col items-center gap-3 rounded-2xl bg-rosa-claro p-4 shadow-sm transition-transform hover:-translate-y-1 hover:shadow-md"
+                className="group flex flex-col items-center gap-3 rounded-2xl border-2 border-transparent bg-rosa-claro p-4 shadow-sm transition-all hover:-translate-y-1 hover:border-vino hover:shadow-md"
               >
                 <span className="flex h-14 w-14 items-center justify-center rounded-full bg-crema text-rosa-intenso shadow-sm transition-colors group-hover:bg-rosa-fuerte group-hover:text-white">
                   {Icono && <Icono size={26} />}

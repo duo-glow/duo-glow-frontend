@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Great_Vibes } from "next/font/google";
+import { Poppins, Great_Vibes } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Flower from "@/components/Flower";
@@ -28,8 +28,9 @@ export const metadata: Metadata = {
   },
 };
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const poppins = Poppins({
+  variable: "--font-poppins",
+  weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
 });
 
@@ -43,7 +44,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="es"
-      className={`${playfair.variable} ${greatVibes.variable} h-full antialiased`}
+      className={`${poppins.variable} ${greatVibes.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <div className="relative flex min-h-full flex-1 flex-col overflow-x-clip bg-rosa-palido px-10 sm:px-14">

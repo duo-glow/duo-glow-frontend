@@ -6,7 +6,7 @@ export default function ProductCard({ producto }: { producto: Producto }) {
   const p = producto;
   return (
     <article
-      className={`relative flex flex-col overflow-hidden rounded-xl border-2 border-dorado-palido bg-white shadow-sm ${
+      className={`relative flex flex-col overflow-hidden rounded-xl border-2 border-dorado-palido bg-white shadow-sm transition-colors hover:border-vino ${
         !p.disponible ? "opacity-70" : ""
       }`}
     >
@@ -37,7 +37,7 @@ export default function ProductCard({ producto }: { producto: Producto }) {
         {p.tonos.length > 0 && (
           <p className="mt-0.5 text-xs text-rosa-intenso">{p.tonos.join(", ")}</p>
         )}
-        <p className="mt-1 text-sm font-bold text-dorado-oscuro">
+        <p className="mt-1 text-sm font-bold text-vino">
           {formatearPrecio(p.precio)}
         </p>
         <a

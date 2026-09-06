@@ -8,7 +8,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-playfair), serif;
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
   --font-cursive: var(--font-great-vibes), cursive;
   --color-rosa-palido: #fff7f9;
   --color-crema: #fdf6f0;
@@ -19,12 +19,13 @@
   --color-dorado-palido: #f6e3b8;
   --color-dorado-medio: #e3a82f;
   --color-dorado-oscuro: #7e5300;
+  --color-vino: #7a2e45;
 }
 
 body {
   background: var(--color-rosa-palido);
   color: #3f1d2e;
-  font-family: var(--font-playfair), serif;
+  font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
 }
 
 .hero {
