@@ -1,43 +1,62 @@
 import Link from "next/link";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
 import { WHATSAPP_NUMERO } from "@/lib/productos";
-
-const LINKS = [
-  { href: "/", label: "Inicio" },
-  { href: "/catalogo", label: "Catálogo" },
-  { href: "/contacto", label: "Contacto" },
-];
 
 export default function Footer() {
   return (
-    <footer className="border-t-2 border-amber-400/40 bg-white/70 px-4 py-8 text-center text-pink-300">
-      <p className="font-cursive text-3xl text-pink-400">Duo Glow</p>
-      <p className="mt-1 text-sm italic tracking-wide text-amber-500/90">
-        Belleza que inspira
-      </p>
+    <footer className="border-t-2 border-dorado-palido bg-white/80 px-4 py-10">
+      <div className="mx-auto grid max-w-5xl gap-8 sm:grid-cols-2 md:grid-cols-3">
+        <div>
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-dorado-oscuro">
+            Navegación
+          </h3>
+          <nav className="mt-3 flex flex-col gap-2 text-sm">
+            <Link href="/" className="text-rosa-medio transition-colors hover:text-rosa-fuerte">
+              Inicio
+            </Link>
+            <Link href="/catalogo" className="text-rosa-medio transition-colors hover:text-rosa-fuerte">
+              Catálogo
+            </Link>
+            <Link href="/contacto" className="text-rosa-medio transition-colors hover:text-rosa-fuerte">
+              Contacto
+            </Link>
+          </nav>
+        </div>
 
-      <nav className="mt-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
-        {LINKS.map((l) => (
-          <Link key={l.href} href={l.href} className="hover:text-pink-500">
-            {l.label}
-          </Link>
-        ))}
-      </nav>
+        <div>
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-dorado-oscuro">
+            Contacto
+          </h3>
+          <div className="mt-3 flex flex-col gap-2 text-sm">
+            <a
+              href={`https://wa.me/${WHATSAPP_NUMERO}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-rosa-medio transition-colors hover:text-rosa-fuerte"
+            >
+              <FaWhatsapp className="h-4 w-4 text-dorado-medio" />
+              <span>{WHATSAPP_NUMERO}</span>
+            </a>
+            <p className="flex items-center gap-2 text-rosa-medio">
+              <FaMapMarkerAlt className="h-4 w-4 shrink-0 text-dorado-medio" />
+              <span>Bogotá, Colombia</span>
+            </p>
+          </div>
+        </div>
 
-      <div className="mt-5 flex flex-col items-center gap-1 text-xs">
-        <a
-          href={`https://wa.me/${WHATSAPP_NUMERO}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-1.5 hover:text-pink-500"
-        >
-          <FaWhatsapp className="h-3.5 w-3.5" />
-          WhatsApp: {WHATSAPP_NUMERO}
-        </a>
-        <p>Bogotá, Colombia</p>
+        <div>
+          <p className="font-cursive text-3xl text-rosa-fuerte">Duo Glow</p>
+          <p className="mt-2 text-sm italic tracking-wide text-dorado-oscuro">
+            Belleza que inspira
+          </p>
+          <p className="mt-2 text-sm text-rosa-medio">
+            Maquillaje y cuidado personal pensados para resaltar tu belleza
+            natural.
+          </p>
+        </div>
       </div>
 
-      <p className="mt-6 border-t border-amber-400/20 pt-4 text-xs text-pink-300/80">
+      <p className="mt-8 border-t border-dorado-palido pt-4 text-center text-xs text-rosa-medio">
         © {new Date().getFullYear()} Duo Glow · Belleza que inspira. Todos los
         derechos reservados.
       </p>

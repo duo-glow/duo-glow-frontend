@@ -4,7 +4,9 @@ import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import ProductCard from "@/components/ProductCard";
+import { CATEGORIA_ICONOS } from "@/lib/categorias";
 import {
+  CATEGORIAS_ORDER,
   obtenerProductos,
   type Producto,
 } from "@/lib/productos";
@@ -81,22 +83,47 @@ export default function Inicio() {
             priority
             className="mx-auto mb-6 h-28 w-auto object-contain sm:h-36"
           />
-          <p className="text-lg italic tracking-wide text-amber-200">
+          <p className="text-lg italic tracking-wide text-dorado-palido">
             Belleza que inspira
           </p>
           <Link
             href="/catalogo"
-            className="mt-8 inline-block rounded-full bg-pink-400 px-8 py-3 text-sm font-medium text-white shadow transition-colors hover:bg-pink-500"
+            className="mt-8 inline-block rounded-full bg-rosa-fuerte px-8 py-3 text-sm font-medium text-white shadow transition-colors hover:bg-rosa-intenso"
           >
             Ver catálogo
           </Link>
         </div>
       </section>
 
+      <section className="mx-auto max-w-5xl px-4 py-12">
+        <h2 className="mb-8 text-center font-cursive text-4xl text-rosa-fuerte">
+          Nuestras categorías
+        </h2>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-5">
+          {CATEGORIAS_ORDER.map((categoria) => {
+            const Icono = CATEGORIA_ICONOS[categoria];
+            return (
+              <Link
+                key={categoria}
+                href={`/catalogo?categoria=${encodeURIComponent(categoria)}`}
+                className="group flex flex-col items-center gap-3 rounded-2xl bg-rosa-claro p-4 shadow-sm transition-transform hover:-translate-y-1 hover:shadow-md"
+              >
+                <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white text-rosa-fuerte shadow-sm transition-colors group-hover:bg-rosa-fuerte group-hover:text-white">
+                  {Icono && <Icono size={26} />}
+                </span>
+                <span className="text-center text-sm font-semibold leading-tight text-rosa-intenso">
+                  {categoria}
+                </span>
+              </Link>
+            );
+          })}
+        </div>
+      </section>
+
       {/* Aquí irá el carrusel/video de belleza */}
 
       <section className="mx-auto max-w-3xl px-4 py-12">
-        <h2 className="mb-6 text-center font-cursive text-4xl text-pink-400">
+        <h2 className="mb-6 text-center font-cursive text-4xl text-rosa-fuerte">
           Productos destacados
         </h2>
 
@@ -110,12 +137,12 @@ export default function Inicio() {
 
         {status === "error" && (
           <div className="py-16 text-center">
-            <p className="text-lg font-medium text-pink-400">
+            <p className="text-lg font-medium text-rosa-medio">
               No pudimos cargar los productos, intenta de nuevo
             </p>
             <button
               onClick={() => setIntento((n) => n + 1)}
-              className="mt-6 rounded-full bg-pink-400 px-6 py-2 text-sm font-medium text-white transition-colors hover:bg-pink-500"
+              className="mt-6 rounded-full bg-rosa-fuerte px-6 py-2 text-sm font-medium text-white transition-colors hover:bg-rosa-intenso"
             >
               Reintentar
             </button>
@@ -132,12 +159,12 @@ export default function Inicio() {
       </section>
 
       <section className="px-4 pb-16 text-center">
-        <p className="mx-auto max-w-xl text-pink-300">
+        <p className="mx-auto max-w-xl text-rosa-medio">
           Descubre todos nuestros productos en el catálogo completo.
         </p>
         <Link
           href="/catalogo"
-          className="mt-6 inline-block rounded-full border-2 border-pink-400 px-8 py-3 text-sm font-medium text-pink-400 transition-colors hover:bg-pink-50"
+          className="mt-6 inline-block rounded-full border-2 border-rosa-fuerte px-8 py-3 text-sm font-medium text-rosa-fuerte transition-colors hover:bg-rosa-claro"
         >
           Ver catálogo completo
         </Link>

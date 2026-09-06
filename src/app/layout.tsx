@@ -47,19 +47,19 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col">
         <div className="relative flex min-h-full flex-1 flex-col overflow-x-clip bg-[#fff7f9] px-10 sm:px-14">
-          <span className="pointer-events-none absolute inset-y-0 left-0 w-1.5 bg-gradient-to-b from-amber-400 via-amber-300 to-amber-400" />
-          <span className="pointer-events-none absolute inset-y-0 right-0 w-1.5 bg-gradient-to-b from-amber-400 via-amber-300 to-amber-400" />
+          <span className="pointer-events-none absolute inset-y-0 left-0 w-1.5 bg-gradient-to-b from-dorado-medio via-dorado-palido to-dorado-medio" />
+          <span className="pointer-events-none absolute inset-y-0 right-0 w-1.5 bg-gradient-to-b from-dorado-medio via-dorado-palido to-dorado-medio" />
 
           <div className="pointer-events-none absolute inset-y-0 left-[3px] flex flex-col items-center justify-around -translate-x-1/2 py-6">
-            <Flower className="h-12 w-12 text-pink-400 sm:h-16 sm:w-16" />
-            <Flower className="h-12 w-12 text-pink-400 sm:h-16 sm:w-16" />
-            <Flower className="h-12 w-12 text-pink-400 sm:h-16 sm:w-16" />
+            <Flower className="h-12 w-12 text-rosa-fuerte sm:h-16 sm:w-16" />
+            <Flower className="h-12 w-12 text-rosa-fuerte sm:h-16 sm:w-16" />
+            <Flower className="h-12 w-12 text-rosa-fuerte sm:h-16 sm:w-16" />
           </div>
 
           <div className="pointer-events-none absolute inset-y-0 right-[3px] flex flex-col items-center justify-around translate-x-1/2 py-6">
-            <Flower className="h-12 w-12 text-pink-400 sm:h-16 sm:w-16" />
-            <Flower className="h-12 w-12 text-pink-400 sm:h-16 sm:w-16" />
-            <Flower className="h-12 w-12 text-pink-400 sm:h-16 sm:w-16" />
+            <Flower className="h-12 w-12 text-rosa-fuerte sm:h-16 sm:w-16" />
+            <Flower className="h-12 w-12 text-rosa-fuerte sm:h-16 sm:w-16" />
+            <Flower className="h-12 w-12 text-rosa-fuerte sm:h-16 sm:w-16" />
           </div>
 
           <Header />

@@ -17,7 +17,7 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-40 border-b-2 border-amber-400/40 bg-white/80 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b-2 border-dorado-palido bg-white/80 backdrop-blur">
       <div className="mx-auto flex max-w-3xl items-center justify-between px-4 py-3">
         <Link href="/" className="flex items-center" onClick={() => setAbierto(false)}>
           <Image
@@ -37,8 +37,8 @@ export default function Header() {
               href={l.href}
               className={`text-sm font-medium transition-colors ${
                 pathname === l.href
-                  ? "text-pink-400"
-                  : "text-pink-300 hover:text-pink-500"
+                  ? "text-rosa-fuerte"
+                  : "text-rosa-medio hover:text-rosa-fuerte"
               }`}
             >
               {l.label}
@@ -49,14 +49,14 @@ export default function Header() {
         <button
           onClick={() => setAbierto((v) => !v)}
           aria-label="Abrir menú"
-          className="flex h-10 w-10 items-center justify-center rounded-full text-pink-400 hover:bg-pink-50 md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-full text-rosa-fuerte hover:bg-rosa-claro md:hidden"
         >
           {abierto ? <FaTimes className="h-5 w-5" /> : <FaBars className="h-5 w-5" />}
         </button>
       </div>
 
       {abierto && (
-        <nav className="border-t border-amber-400/20 bg-white/95 px-4 py-2 md:hidden">
+        <nav className="border-t border-dorado-palido bg-white/95 px-4 py-2 md:hidden">
           {LINKS.map((l) => (
             <Link
               key={l.href}
@@ -64,8 +64,8 @@ export default function Header() {
               onClick={() => setAbierto(false)}
               className={`block rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
                 pathname === l.href
-                  ? "text-pink-400"
-                  : "text-pink-300 hover:bg-pink-50 hover:text-pink-500"
+                  ? "text-rosa-fuerte"
+                  : "text-rosa-medio hover:bg-rosa-claro hover:text-rosa-fuerte"
               }`}
             >
               {l.label}

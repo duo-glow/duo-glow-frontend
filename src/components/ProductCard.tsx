@@ -6,11 +6,11 @@ export default function ProductCard({ producto }: { producto: Producto }) {
   const p = producto;
   return (
     <article
-      className={`relative flex flex-col overflow-hidden rounded-xl border-2 border-amber-400/40 bg-white shadow-sm ${
+      className={`relative flex flex-col overflow-hidden rounded-xl border-2 border-dorado-palido bg-white shadow-sm ${
         !p.disponible ? "opacity-70" : ""
       }`}
     >
-      <div className="relative aspect-square bg-pink-100/60">
+      <div className="relative aspect-square bg-rosa-claro/40">
         {p.foto ? (
           <Image
             src={p.foto}
@@ -20,7 +20,7 @@ export default function ProductCard({ producto }: { producto: Producto }) {
             className="object-cover"
           />
         ) : (
-          <span className="flex h-full w-full items-center justify-center text-xs text-pink-300">
+          <span className="flex h-full w-full items-center justify-center text-xs text-rosa-medio">
             {p.nombre.split(" ")[0]}
           </span>
         )}
@@ -33,11 +33,11 @@ export default function ProductCard({ producto }: { producto: Producto }) {
         )}
       </div>
       <div className="flex flex-1 flex-col p-3">
-        <h3 className="text-sm font-semibold text-pink-400">{p.nombre}</h3>
+        <h3 className="text-sm font-semibold text-rosa-intenso">{p.nombre}</h3>
         {p.tonos.length > 0 && (
-          <p className="mt-0.5 text-xs text-pink-300">{p.tonos.join(", ")}</p>
+          <p className="mt-0.5 text-xs text-rosa-medio">{p.tonos.join(", ")}</p>
         )}
-        <p className="mt-1 text-sm font-bold text-amber-500">
+        <p className="mt-1 text-sm font-bold text-dorado-oscuro">
           {formatearPrecio(p.precio)}
         </p>
         <a
@@ -47,7 +47,7 @@ export default function ProductCard({ producto }: { producto: Producto }) {
           aria-disabled={!p.disponible}
           className={`mt-2 flex items-center justify-center gap-1.5 rounded-full py-1.5 text-center text-xs font-medium transition-colors ${
             p.disponible
-              ? "bg-pink-400 text-white hover:bg-pink-500"
+              ? "bg-rosa-fuerte text-white hover:bg-rosa-intenso"
               : "pointer-events-none cursor-not-allowed bg-zinc-300 text-zinc-500"
           }`}
         >

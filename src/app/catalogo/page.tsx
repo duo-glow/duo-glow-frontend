@@ -1,6 +1,8 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { Suspense, useCallback, useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import ProductCard from "@/components/ProductCard";
 import {
   agruparPorCategoria,
@@ -10,7 +12,8 @@ import {
   type Producto,
 } from "@/lib/productos";
 
-export default function Catalogo() {
+function CatalogoContent() {
+  const searchParams = useSearchParams();
   const [status, setStatus] = useState<"loading" | "success" | "error">(
     "loading"
   );
@@ -31,13 +34,15 @@ export default function Catalogo() {
       .then((json: Producto[]) => {
         const ordenadas = agruparPorCategoria(json);
         setCategorias(ordenadas);
-        setActiva(ordenadas[0]?.nombre ?? "");
+        const desdeURL = searchParams.get("categoria");
+        const coincide = ordenadas.some((c) => c.nombre === desdeURL);
+        setActiva(coincide ? (desdeURL as string) : (ordenadas[0]?.nombre ?? ""));
         setStatus("success");
       })
       .catch(() => {
         setStatus("error");
       });
-  }, []);
+  }, [searchParams]);
 
   useEffect(() => {
     cargarProductos();
@@ -47,7 +52,7 @@ export default function Catalogo() {
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-8">
-      <h1 className="mb-6 text-center font-cursive text-5xl text-pink-400">
+      <h1 className="mb-6 text-center font-cursive text-5xl text-rosa-fuerte">
         Catálogo
       </h1>
 
@@ -84,12 +89,12 @@ export default function Catalogo() {
 
       {status === "error" && (
         <div className="py-16 text-center">
-          <p className="text-lg font-medium text-pink-400">
+          <p className="text-lg font-medium text-rosa-medio">
             No pudimos cargar los productos, intenta de nuevo
           </p>
           <button
             onClick={() => setIntento((n) => n + 1)}
-            className="mt-6 rounded-full bg-pink-400 px-6 py-2 text-sm font-medium text-white transition-colors hover:bg-pink-500"
+            className="mt-6 rounded-full bg-rosa-fuerte px-6 py-2 text-sm font-medium text-white transition-colors hover:bg-rosa-intenso"
           >
             Reintentar
           </button>
@@ -102,7 +107,7 @@ export default function Catalogo() {
             <button
               onClick={desplazarIzquierda}
               aria-label="Desplazar categorías a la izquierda"
-              className="z-10 hidden h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-amber-400/60 bg-white text-pink-400 shadow-sm transition-colors hover:bg-pink-50 md:flex"
+              className="z-10 hidden h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-dorado-medio/60 bg-white text-rosa-medio shadow-sm transition-colors hover:bg-rosa-claro md:flex"
             >
               ◀
             </button>
@@ -123,8 +128,8 @@ export default function Catalogo() {
                     onClick={() => setActiva(c.nombre)}
                     className={`whitespace-nowrap rounded-full border-2 px-4 py-1.5 text-sm transition-colors ${
                       activa === c.nombre
-                        ? "border-pink-400 bg-pink-400 text-white shadow"
-                        : "border-amber-400/60 bg-white text-pink-400 hover:bg-pink-50"
+                        ? "border-rosa-fuerte bg-rosa-fuerte text-white shadow"
+                        : "border-dorado-medio/60 bg-white text-rosa-fuerte hover:bg-rosa-claro"
                     }`}
                   >
                     {c.nombre}
@@ -132,14 +137,14 @@ export default function Catalogo() {
                 ))}
               </nav>
 
-              <span className="pointer-events-none absolute inset-y-0 left-0 w-6 bg-gradient-to-r from-[#fff7f9] to-transparent" />
-              <span className="pointer-events-none absolute inset-y-0 right-0 w-6 bg-gradient-to-l from-[#fff7f9] to-transparent" />
+              <span className="pointer-events-none absolute inset-y-0 left-0 w-6 bg-gradient-to-r from-rosa-palido to-transparent" />
+              <span className="pointer-events-none absolute inset-y-0 right-0 w-6 bg-gradient-to-l from-rosa-palido to-transparent" />
             </div>
 
             <button
               onClick={desplazarDerecha}
               aria-label="Desplazar categorías a la derecha"
-              className="z-10 hidden h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-amber-400/60 bg-white text-pink-400 shadow-sm transition-colors hover:bg-pink-50 md:flex"
+              className="z-10 hidden h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-dorado-medio/60 bg-white text-rosa-medio shadow-sm transition-colors hover:bg-rosa-claro md:flex"
             >
               ▶
             </button>
@@ -147,7 +152,34 @@ export default function Catalogo() {
 
           {activaData && (
             <section className="mt-5">
-              <h2 className="mb-4 text-center font-cursive text-4xl text-pink-400">
+              <nav
+                aria-label="Ruta de navegación"
+                className="mb-4 flex items-center text-sm"
+              >
+                <Link
+                  href="/"
+                  className="text-rosa-medio transition-colors hover:text-rosa-fuerte"
+                >
+                  Inicio
+                </Link>
+                <span className="mx-1.5 text-rosa-medio" aria-hidden="true">
+                  ›
+                </span>
+                <Link
+                  href="/catalogo"
+                  className="text-rosa-medio transition-colors hover:text-rosa-fuerte"
+                >
+                  Catálogo
+                </Link>
+                <span className="mx-1.5 text-rosa-medio" aria-hidden="true">
+                  ›
+                </span>
+                <span className="font-semibold text-rosa-fuerte">
+                  {activaData.nombre}
+                </span>
+              </nav>
+
+              <h2 className="mb-4 text-center font-cursive text-4xl text-rosa-fuerte">
                 {activaData.nombre}
               </h2>
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
@@ -160,5 +192,13 @@ export default function Catalogo() {
         </div>
       )}
     </div>
+  );
+}
+
+export default function Catalogo() {
+  return (
+    <Suspense fallback={null}>
+      <CatalogoContent />
+    </Suspense>
   );
 }

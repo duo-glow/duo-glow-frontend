@@ -10,6 +10,14 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-playfair), serif;
   --font-cursive: var(--font-great-vibes), cursive;
+  --color-rosa-palido: #fff7f9;
+  --color-rosa-claro: #f8cfe0;
+  --color-rosa-medio: #ef5da8;
+  --color-rosa-fuerte: #e2278e;
+  --color-rosa-intenso: #b0155e;
+  --color-dorado-palido: #f6e3b8;
+  --color-dorado-medio: #e3a82f;
+  --color-dorado-oscuro: #a9740a;
 }
 
 body {
