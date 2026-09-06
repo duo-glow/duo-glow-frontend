@@ -50,6 +50,14 @@ export default function Inicio() {
   return (
     <div>
       <section className="hero relative -mt-20 flex items-center justify-center overflow-hidden sm:-mt-[5.5rem]">
+        <div
+          className="pointer-events-none absolute inset-x-0 top-0 z-[2] h-24"
+          style={{
+            background:
+              "linear-gradient(to bottom, rgba(0,0,0,0.5), transparent)",
+          }}
+          aria-hidden="true"
+        />
         <video
           autoPlay
           muted
