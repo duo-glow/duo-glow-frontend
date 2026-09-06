@@ -4,7 +4,7 @@ import { WHATSAPP_NUMERO, formatearWhatsApp } from "@/lib/productos";
 
 export default function Footer() {
   return (
-    <footer className="border-t-2 border-dorado-medio bg-rosa-claro/90 px-4 py-10">
+    <footer className="border-t-2 border-dorado-medio bg-gradient-to-br from-rosa-suave to-rosa-claro px-4 py-10">
       <div className="mx-auto grid max-w-5xl gap-8 sm:grid-cols-2 md:grid-cols-3">
         <div>
           <h3 className="text-sm font-semibold uppercase tracking-wider text-dorado-oscuro">

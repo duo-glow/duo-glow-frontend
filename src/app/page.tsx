@@ -49,7 +49,7 @@ export default function Inicio() {
 
   return (
     <div>
-      <section className="hero relative flex items-center justify-center overflow-hidden">
+      <section className="hero relative -mt-20 flex items-center justify-center overflow-hidden sm:-mt-[5.5rem]">
         <video
           autoPlay
           muted

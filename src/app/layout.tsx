@@ -47,7 +47,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${poppins.variable} ${greatVibes.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <div className="relative flex min-h-full flex-1 flex-col overflow-x-clip bg-rosa-palido px-10 sm:px-14">
+        <div className="relative flex min-h-full flex-1 flex-col overflow-x-clip bg-gradient-to-br from-rosa-palido to-rosa-suave px-10 sm:px-14">
           <span className="pointer-events-none absolute inset-y-0 left-0 w-1.5 bg-gradient-to-b from-dorado-medio via-dorado-palido to-dorado-medio" />
           <span className="pointer-events-none absolute inset-y-0 right-0 w-1.5 bg-gradient-to-b from-dorado-medio via-dorado-palido to-dorado-medio" />
 
