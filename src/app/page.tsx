@@ -47,14 +47,14 @@ export default function Inicio() {
 
   return (
     <div>
-      <section className="relative flex min-h-[500px] items-center justify-center overflow-hidden sm:min-h-[70vh]">
+      <section className="relative flex min-h-[50vh] items-center justify-center overflow-hidden md:min-h-[70vh]">
         <video
           autoPlay
           muted
           loop
           playsInline
           aria-hidden="true"
-          className="absolute inset-0 z-[1] h-full w-full scale-[1.15] object-cover object-center blur-[30px]"
+          className="absolute inset-0 z-[1] hidden h-full w-full scale-[1.15] object-cover object-center blur-[30px] md:block"
         >
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
@@ -68,11 +68,11 @@ export default function Inicio() {
           muted
           loop
           playsInline
-          className="absolute inset-0 z-[2] flex h-full w-full items-center justify-center object-contain"
+          className="absolute inset-0 z-[2] flex h-full w-full items-center justify-center object-cover object-center md:object-contain"
         >
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
-        <div className="relative z-[3] px-4 py-16 text-center">
+        <div className="relative z-[3] px-4 py-12 text-center md:py-16">
           <Image
             src="/logo.png"
             alt="Duo Glow"
