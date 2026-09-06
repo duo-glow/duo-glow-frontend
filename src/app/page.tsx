@@ -47,13 +47,13 @@ export default function Inicio() {
 
   return (
     <div>
-      <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden">
+      <section className="relative flex min-h-[500px] items-center justify-center overflow-hidden sm:min-h-[70vh]">
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover object-center"
         >
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
