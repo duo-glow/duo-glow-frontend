@@ -25,3 +25,13 @@ body {
   color: #3f1d2e;
   font-family: var(--font-playfair), serif;
 }
+
+.hero {
+  min-height: 50vh;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    min-height: 70vh;
+  }
+}

@@ -49,14 +49,14 @@ export default function Inicio() {
 
   return (
     <div>
-      <section className="relative flex min-h-[50vh] items-center justify-center overflow-hidden md:min-h-[70vh]">
+      <section className="hero relative flex items-center justify-center overflow-hidden">
         <video
           autoPlay
           muted
           loop
           playsInline
           aria-hidden="true"
-          className="absolute inset-0 z-[1] hidden h-full w-full scale-[1.15] object-cover object-center blur-[30px] md:block"
+          className="absolute inset-0 z-[1] hidden h-full w-full object-cover object-center blur-[30px] scale-[1.15] md:block"
         >
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
@@ -70,7 +70,7 @@ export default function Inicio() {
           muted
           loop
           playsInline
-          className="absolute inset-0 z-[2] flex h-full w-full items-center justify-center object-cover object-center md:object-contain"
+          className="absolute inset-0 z-[2] h-full w-full object-cover object-center md:object-contain"
         >
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
