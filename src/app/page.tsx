@@ -53,16 +53,26 @@ export default function Inicio() {
           muted
           loop
           playsInline
-          className="absolute inset-0 h-full w-full object-cover object-center"
+          aria-hidden="true"
+          className="absolute inset-0 z-[1] h-full w-full scale-[1.15] object-cover object-center blur-[30px]"
         >
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
         <div
-          className="absolute inset-0"
-          style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
+          className="absolute inset-0 z-[1]"
+          style={{ backgroundColor: "rgba(0,0,0,0.35)" }}
           aria-hidden="true"
         />
-        <div className="relative z-10 px-4 py-16 text-center">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 z-[2] flex h-full w-full items-center justify-center object-contain"
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
+        <div className="relative z-[3] px-4 py-16 text-center">
           <Image
             src="/logo.png"
             alt="Duo Glow"
