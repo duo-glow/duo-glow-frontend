@@ -48,8 +48,18 @@ export default function Inicio() {
   return (
     <div>
       <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
         <div
-          className="absolute inset-0 bg-gradient-to-br from-pink-200 via-[#fff7f9] to-amber-200"
+          className="absolute inset-0"
+          style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
           aria-hidden="true"
         />
         <div className="relative z-10 px-4 py-16 text-center">
@@ -61,7 +71,7 @@ export default function Inicio() {
             priority
             className="mx-auto mb-6 h-28 w-auto object-contain sm:h-36"
           />
-          <p className="text-lg italic tracking-wide text-amber-500/90">
+          <p className="text-lg italic tracking-wide text-amber-200">
             Belleza que inspira
           </p>
           <Link
