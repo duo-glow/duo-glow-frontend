@@ -37,7 +37,7 @@ export default function Header() {
               href={l.href}
               className={`text-sm font-medium transition-colors ${
                 pathname === l.href
-                  ? "text-rosa-intenso font-semibold"
+                  ? "text-rosa-intenso font-semibold underline underline-offset-8 decoration-rosa-intenso"
                   : "text-rosa-intenso hover:text-rosa-fuerte"
               }`}
             >
@@ -57,14 +57,14 @@ export default function Header() {
 
       {abierto && (
         <nav className="border-t border-dorado-palido bg-white/95 px-4 py-2 md:hidden">
-          {LINKS.map((l) => (
+{LINKS.map((l) => (
             <Link
               key={l.href}
               href={l.href}
               onClick={() => setAbierto(false)}
               className={`block rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
                 pathname === l.href
-                  ? "text-rosa-intenso font-semibold"
+                  ? "text-rosa-intenso font-semibold underline underline-offset-4 decoration-rosa-intenso"
                   : "text-rosa-intenso hover:bg-rosa-claro hover:text-rosa-fuerte"
               }`}
             >
