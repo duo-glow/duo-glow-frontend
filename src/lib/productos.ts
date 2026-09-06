@@ -39,6 +39,16 @@ export const formatearPrecio = (precio: number) =>
     maximumFractionDigits: 0,
   }).format(precio);
 
+export const formatearWhatsApp = (numero: string): string => {
+  const digitos = numero.replace(/\D/g, "");
+  if (digitos.length < 12) return numero;
+  const nacional = digitos.slice(2);
+  return `+${digitos.slice(0, 2)} ${nacional.slice(0, 3)} ${nacional.slice(
+    3,
+    6
+  )} ${nacional.slice(6, 10)}`;
+};
+
 export const linkWhatsApp = (p: Producto) =>
   `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(
     `Hola, quiero pedir: ${p.nombre} (${formatearPrecio(p.precio)})`

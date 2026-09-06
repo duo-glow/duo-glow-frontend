@@ -1,5 +1,5 @@
 import { FaWhatsapp, FaMapMarkerAlt } from "react-icons/fa";
-import { WHATSAPP_NUMERO } from "@/lib/productos";
+import { WHATSAPP_NUMERO, formatearWhatsApp } from "@/lib/productos";
 
 export default function Contacto() {
   return (
@@ -31,7 +31,7 @@ export default function Contacto() {
             Pedir por WhatsApp
           </a>
           <p className="mt-3 text-center text-xs text-rosa-medio">
-            {WHATSAPP_NUMERO}
+            {formatearWhatsApp(WHATSAPP_NUMERO)}
           </p>
         </div>
 
@@ -39,7 +39,7 @@ export default function Contacto() {
           <h2 className="text-lg font-semibold text-rosa-intenso">Ubicación</h2>
           <p className="mt-3 flex items-center gap-2 text-sm text-rosa-medio">
             <FaMapMarkerAlt className="h-4 w-4 text-dorado-medio" />
-            Bogotá, Colombia
+            Ibagué, Colombia
           </p>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
-import { WHATSAPP_NUMERO } from "@/lib/productos";
+import { WHATSAPP_NUMERO, formatearWhatsApp } from "@/lib/productos";
 
 export default function Footer() {
   return (
@@ -35,11 +35,11 @@ export default function Footer() {
               className="flex items-center gap-2 text-rosa-medio transition-colors hover:text-rosa-fuerte"
             >
               <FaWhatsapp className="h-4 w-4 text-dorado-medio" />
-              <span>{WHATSAPP_NUMERO}</span>
+              <span>{formatearWhatsApp(WHATSAPP_NUMERO)}</span>
             </a>
             <p className="flex items-center gap-2 text-rosa-medio">
               <FaMapMarkerAlt className="h-4 w-4 shrink-0 text-dorado-medio" />
-              <span>Bogotá, Colombia</span>
+              <span>Ibagué, Colombia</span>
             </p>
           </div>
         </div>
