@@ -119,7 +119,7 @@ export default function Inicio() {
                 <span className="flex h-14 w-14 items-center justify-center rounded-full bg-crema text-rosa-intenso shadow-sm transition-colors group-hover:bg-rosa-fuerte group-hover:text-white">
                   {Icono && <Icono size={26} />}
                 </span>
-                <span className="text-center text-sm font-semibold leading-tight text-rosa-intenso">
+                <span className="line-clamp-2 min-h-[2.5rem] text-center text-sm font-semibold leading-tight text-rosa-intenso">
                   {categoria}
                 </span>
               </Link>

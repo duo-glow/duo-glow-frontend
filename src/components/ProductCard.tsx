@@ -33,7 +33,7 @@ export default function ProductCard({ producto }: { producto: Producto }) {
         )}
       </div>
       <div className="flex flex-1 flex-col p-3">
-        <h3 className="text-sm font-semibold text-rosa-intenso">{p.nombre}</h3>
+        <h3 className="line-clamp-2 min-h-[2.25rem] text-sm font-semibold text-rosa-intenso">{p.nombre}</h3>
         {p.tonos.length > 0 && (
           <p className="mt-0.5 text-xs text-rosa-intenso">{p.tonos.join(", ")}</p>
         )}
@@ -51,8 +51,15 @@ export default function ProductCard({ producto }: { producto: Producto }) {
               : "pointer-events-none cursor-not-allowed bg-zinc-300 text-zinc-500"
           }`}
         >
-          <FaWhatsapp className="h-3.5 w-3.5" />
-          {p.disponible ? "Pedir por WhatsApp" : "Agotado"}
+          <FaWhatsapp className="h-3.5 w-3.5 shrink-0" />
+          {p.disponible ? (
+            <>
+              <span className="hidden sm:inline">Pedir por WhatsApp</span>
+              <span className="sm:hidden">Pedir</span>
+            </>
+          ) : (
+            "Agotado"
+          )}
         </a>
       </div>
     </article>
