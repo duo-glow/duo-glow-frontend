@@ -7,10 +7,10 @@ export default function Footer() {
     <footer className="border-t-2 border-dorado-medio bg-gradient-to-br from-rosa-claro to-rosa-medio/30 px-4 py-10">
       <div className="mx-auto grid max-w-6xl gap-8 sm:grid-cols-2 md:grid-cols-3">
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-dorado-oscuro">
+          <h3 className="text-center text-sm font-semibold uppercase tracking-wider text-dorado-oscuro sm:text-left">
             Navegación
           </h3>
-          <nav className="mt-3 flex flex-col gap-2 text-sm">
+          <nav className="mt-3 flex flex-col items-center gap-2 text-sm sm:items-start">
             <Link href="/" className="text-rosa-intenso transition-colors hover:text-rosa-fuerte">
               Inicio
             </Link>
@@ -24,10 +24,10 @@ export default function Footer() {
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-dorado-oscuro">
+          <h3 className="text-center text-sm font-semibold uppercase tracking-wider text-dorado-oscuro sm:text-left">
             Contacto
           </h3>
-          <div className="mt-3 flex flex-col gap-2 text-sm">
+          <div className="mt-3 flex flex-col items-center gap-2 text-sm sm:items-start">
             <a
               href={`https://wa.me/${WHATSAPP_NUMERO}`}
               target="_blank"
@@ -44,7 +44,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div>
+        <div className="text-center sm:text-left">
           <p className="font-cursive text-3xl text-rosa-intenso">Duo Glow</p>
           <p className="mt-2 text-sm italic tracking-wide text-dorado-oscuro">
             Belleza que inspira
