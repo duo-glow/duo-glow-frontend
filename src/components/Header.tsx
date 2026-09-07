@@ -36,7 +36,7 @@ export default function Header() {
       className={`sticky top-0 z-40 border-b-2 transition-colors duration-300 ${
         transparente
           ? "border-transparent bg-transparent"
-          : "border-dorado-medio bg-rosa-claro/90 backdrop-blur"
+          : "border-dorado-medio bg-white/95 backdrop-blur"
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
@@ -93,7 +93,7 @@ export default function Header() {
           className={`border-t px-4 py-2 md:hidden ${
             transparente
               ? "border-white/20 bg-rosa-intenso/60 backdrop-blur"
-              : "border-dorado-palido bg-rosa-claro/95"
+              : "border-dorado-palido bg-white/95"
           }`}
         >
           {LINKS.map((l) => (
