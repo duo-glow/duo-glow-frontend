@@ -51,7 +51,7 @@ function CatalogoContent() {
   const activaData = categorias.find((c) => c.nombre === activa);
 
   return (
-    <div className="mx-auto max-w-3xl px-4 py-8">
+    <div className="mx-auto max-w-6xl px-4 py-8">
       <h1 className="mb-6 text-center font-cursive text-5xl text-rosa-intenso">
         Catálogo
       </h1>
@@ -68,7 +68,7 @@ function CatalogoContent() {
           </nav>
           <div className="mt-5">
             <div className="mx-auto mb-4 h-8 w-40 animate-pulse rounded bg-zinc-200" />
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
               {Array.from({ length: 6 }).map((_, i) => (
                 <div
                   key={i}
@@ -182,7 +182,7 @@ function CatalogoContent() {
               <h2 className="mb-4 text-center font-cursive text-4xl text-rosa-intenso">
                 {activaData.nombre}
               </h2>
-              <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+              <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
                 {activaData.productos.map((p) => (
                   <ProductCard key={p.id} producto={p} />
                 ))}

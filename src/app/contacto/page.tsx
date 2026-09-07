@@ -3,7 +3,7 @@ import { WHATSAPP_NUMERO, formatearWhatsApp } from "@/lib/productos";
 
 export default function Contacto() {
   return (
-    <div className="mx-auto max-w-3xl px-4 py-12">
+    <div className="mx-auto max-w-6xl px-4 py-12">
       <h1 className="mb-8 text-center font-cursive text-5xl text-rosa-intenso">
         Contacto
       </h1>

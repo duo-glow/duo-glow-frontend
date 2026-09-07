@@ -103,7 +103,7 @@ export default function Inicio() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-4 py-12">
+      <section className="mx-auto max-w-6xl px-4 py-12">
         <h2 className="mb-8 text-center font-cursive text-4xl text-rosa-intenso">
           Nuestras categorías
         </h2>
@@ -130,13 +130,13 @@ export default function Inicio() {
 
       {/* Aquí irá el carrusel/video de belleza */}
 
-      <section className="mx-auto max-w-3xl px-4 py-12">
+      <section className="mx-auto max-w-6xl px-4 py-12">
         <h2 className="mb-6 text-center font-cursive text-4xl text-rosa-intenso">
           Productos destacados
         </h2>
 
         {status === "loading" && (
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6">
             {Array.from({ length: 6 }).map((_, i) => (
               <SkeletonCard key={i} />
             ))}
@@ -158,7 +158,7 @@ export default function Inicio() {
         )}
 
         {status === "success" && (
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6">
             {destacados.map((p) => (
               <ProductCard key={p.id} producto={p} />
             ))}
