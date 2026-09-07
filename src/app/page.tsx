@@ -2,7 +2,6 @@
 
 import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import ProductCard from "@/components/ProductCard";
 import { CATEGORIA_ICONOS } from "@/lib/categorias";
 import {
@@ -83,14 +82,6 @@ export default function Inicio() {
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
         <div className="relative z-[3] px-4 py-12 text-center md:py-16">
-          <Image
-            src="/logo.png"
-            alt="Duo Glow"
-            width={1254}
-            height={1254}
-            priority
-            className="mx-auto mb-6 h-28 w-auto object-contain sm:h-36"
-          />
           <p className="text-lg italic tracking-wide text-dorado-palido">
             Belleza que inspira
           </p>
