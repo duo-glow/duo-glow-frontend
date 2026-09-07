@@ -78,11 +78,13 @@ export default function Header() {
         <button
           onClick={() => setAbierto((v) => !v)}
           aria-label="Abrir menú"
-          className={`flex h-10 w-10 items-center justify-center rounded-full transition-colors md:hidden ${
+          className={`flex h-10 w-10 items-center justify-center rounded-full transition-transform duration-200 ${
+            abierto ? "rotate-90" : ""
+          } ${
             transparente
               ? "text-white hover:bg-white/10"
               : "text-rosa-intenso hover:bg-rosa-claro"
-          }`}
+          } md:hidden`}
         >
           {abierto ? <FaTimes className="h-5 w-5" /> : <FaBars className="h-5 w-5" />}
         </button>
@@ -90,9 +92,9 @@ export default function Header() {
 
       {abierto && (
         <nav
-          className={`border-t px-4 py-2 md:hidden ${
+          className={`menu-slide-down border-t px-4 py-2 md:hidden ${
             transparente
-              ? "border-white/20 bg-rosa-intenso/60 backdrop-blur"
+              ? "border-white/20 bg-vino/75 backdrop-blur"
               : "border-dorado-palido bg-white/95"
           }`}
         >

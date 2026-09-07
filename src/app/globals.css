@@ -38,3 +38,17 @@ body {
     min-height: 70vh;
   }
 }
+
+@keyframes menu-slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.menu-slide-down {
+  animation: menu-slide-down 0.18s ease-out;
+}

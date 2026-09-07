@@ -4,6 +4,7 @@ import { Suspense, useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import ProductCard from "@/components/ProductCard";
+import Reveal from "@/components/Reveal";
 import {
   agruparPorCategoria,
   CATEGORIAS_ORDER,
@@ -151,7 +152,8 @@ function CatalogoContent() {
           </div>
 
           {activaData && (
-            <section className="mt-5">
+            <Reveal>
+              <section className="mt-5">
               <nav
                 aria-label="Ruta de navegación"
                 className="mb-4 flex items-center text-sm"
@@ -188,6 +190,7 @@ function CatalogoContent() {
                 ))}
               </div>
             </section>
+            </Reveal>
           )}
         </div>
       )}

@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import ProductCard from "@/components/ProductCard";
+import Reveal from "@/components/Reveal";
 import { CATEGORIA_ICONOS } from "@/lib/categorias";
 import {
   CATEGORIAS_ORDER,
@@ -94,10 +95,11 @@ export default function Inicio() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-12">
-        <h2 className="mb-8 text-center font-cursive text-4xl text-rosa-intenso">
-          Nuestras categorías
-        </h2>
+      <Reveal>
+        <section className="mx-auto max-w-6xl px-4 py-12">
+          <h2 className="mb-8 text-center font-cursive text-4xl text-rosa-intenso">
+            Nuestras categorías
+          </h2>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-5">
           {CATEGORIAS_ORDER.map((categoria) => {
             const Icono = CATEGORIA_ICONOS[categoria];
@@ -116,15 +118,17 @@ export default function Inicio() {
               </Link>
             );
           })}
-        </div>
-      </section>
+</div>
+        </section>
+      </Reveal>
 
       {/* Aquí irá el carrusel/video de belleza */}
 
-      <section className="mx-auto max-w-6xl px-4 py-12">
-        <h2 className="mb-6 text-center font-cursive text-4xl text-rosa-intenso">
-          Productos destacados
-        </h2>
+      <Reveal>
+        <section className="mx-auto max-w-6xl px-4 py-12">
+          <h2 className="mb-6 text-center font-cursive text-4xl text-rosa-intenso">
+            Productos destacados
+          </h2>
 
         {status === "loading" && (
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6">
@@ -156,6 +160,7 @@ export default function Inicio() {
           </div>
         )}
       </section>
+      </Reveal>
 
       <section className="px-4 pb-16 text-center">
         <p className="mx-auto max-w-xl text-rosa-intenso">
