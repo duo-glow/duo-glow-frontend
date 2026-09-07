@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import Image from "next/image";
 import { FaEye, FaWhatsapp } from "react-icons/fa";
 import { formatearPrecio, linkWhatsApp, type Producto } from "@/lib/productos";
@@ -14,7 +15,12 @@ export default function ProductCard({ producto }: { producto: Producto }) {
       if (e.key === "Escape") setDetalleAbierto(false);
     };
     window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prevOverflow;
+    };
   }, [detalleAbierto]);
 
   return (
@@ -85,15 +91,16 @@ export default function ProductCard({ producto }: { producto: Producto }) {
         </a>
       </div>
 
-      {detalleAbierto && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
-          onClick={() => setDetalleAbierto(false)}
-        >
+      {detalleAbierto &&
+        createPortal(
           <div
-            className="w-full max-w-sm overflow-hidden rounded-2xl bg-white shadow-lg"
-            onClick={(e) => e.stopPropagation()}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
+            onClick={() => setDetalleAbierto(false)}
           >
+            <div
+              className="max-h-[90vh] w-full max-w-sm overflow-y-auto rounded-2xl bg-white shadow-lg"
+              onClick={(e) => e.stopPropagation()}
+            >
             <div className="relative aspect-square bg-rosa-claro/40">
               {p.foto ? (
                 <Image
@@ -144,7 +151,8 @@ export default function ProductCard({ producto }: { producto: Producto }) {
               </a>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </article>
   );
